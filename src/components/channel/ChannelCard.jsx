@@ -9,7 +9,7 @@ const ChannelAvatar = ({url}) => {
 }
 
 export const ChannelCard = ({
-    tittle,
+    title,
     id,
     username,
     isOnline,

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logo from '../../assets/img/EscudoPeque.svg'
+import logo from '../../assets/EscudoPeque.svg'
 import { useUserDetails } from "../../shared/hooks";
 
 const NavLogo = () => {
