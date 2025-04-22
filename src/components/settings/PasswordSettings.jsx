@@ -4,7 +4,7 @@ import {
     validatePassword
 } from "../../shared/validators"
 import { useChangePassword } from "../../shared/hooks";
-import { Input} from "./Input"
+import { Input} from "../Input"
 
 const inputs = [
     {

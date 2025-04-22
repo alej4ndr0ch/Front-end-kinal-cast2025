@@ -19,31 +19,30 @@ export const useChannelSettings = () => {
             username: response.data.username,
             title: response.data.title,
             description: response.data.description,
-            avatarURL: response.data.avatarURL,
-            streamKey: response.data.streamKey 
+            avatarUrl: response.data.avatarUrl,
+            streamKey: response.data.streamKey
         })
     }
 
-    const saveSettings = async(data) => {
+    const saveSettings = async (data) => {
         const response = await updateChannelSettings(data)
 
         if(response.error){
             return toast.error(
-                response.e?.response?.data || 'Ocurrio un error al actualizar la informacion del canal'
+                response.e?.response?.data || 'Ocurrio un error al actualizar la información del canal'
             )
         }
+
+        toast.success('Información actualizada correctamente')
     }
 
-    toast.success('informacion actualizada correctamente')
-
-    useEffect (() => {
+    useEffect(() => {
         fetchChannelSettings()
-    },  [])
+    },[])
 
     return ({
         isFetching: !channelSettings,
         channelSettings,
         saveSettings
     })
-
 }
